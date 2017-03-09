@@ -1,7 +1,18 @@
 #!/bin/bash
+cd ../nitrogen
+#git revert --abort
+echo "git revert --abort"
+cd device/xiaomi/msm8956-common/
+git revert --abort
+cd ../../../
+cd kernel/xiaomi/msm8956
+git revert --abort
+cd ../../../
+cd vendor/xiaomi/
+git revert --abort
+cd ../../
 # Updating sources
 echo "Updating sources"
-cd ../nitrogen
 repo sync
 # Revert fpc commits
 echo "Revert fpc commits"
