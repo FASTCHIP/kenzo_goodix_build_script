@@ -54,7 +54,8 @@ echo -e "${bldblu}Starting compilation ${txtrst}"
 res1=$(date +%s.%N)
 #brunch kenzo
 lunch nitrogen_kenzo-userdebug
-make -j  otapackage
+make -j2  otapackage
+#make -j* - Use your value. Depends on the number of cores and RAM
 #make -j 6 bootimage
 # finished? get elapsed time
 res2=$(date +%s.%N)
